@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home</title>
+    <title>index</title>
     <style>
-      /* Style the navigation bar */
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #4CAF50;
-        color: white;
-        padding: 1rem;
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
       }
 
-      /* Style the navigation buttons */
-      .nav-btn {
-        background-color: #008080;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        cursor: pointer;
+      h1 {
+        color: #008080;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
       }
 
-      /* Style the table */
       table {
         border-collapse: collapse;
         width: 100%;
+        margin-top: 20px;
       }
-      
+
       th, td {
-        text-align: left;
         padding: 8px;
+        text-align: left;
         border-bottom: 1px solid #ddd;
       }
-      
+
       th {
-        background-color: #4CAF50;
-        color: white;
+        background-color: #008080;
+        color: #fff;
       }
-      
-      /* Style the table header */
-      h2 {
-        font-size: 1.2rem;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
       }
     </style>
   </head>
   <body>
-    <nav>
-      <h1>Navigation Bar</h1>
-      <div>
-        <button class="nav-btn" onclick="location.href='home.html'">Home</button>
-        <button class="nav-btn" onclick="location.href='show.html'">Diversity</button>
-      </div>
-    </nav>
-    <h1>Home Page</h1>
-    <p>Welcome to our website!</p>
+    <h1>School Admission by Diversity</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>SCHOOL</th>
+          <th>PROCESS</th>
+          <th>DBN</th>
+          <th>SCHOOL NAME</th>
+          <th>PROGRAM CODE</th>
+          <th>PROGRAM NAME</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{row["school_id"]}}</td>
+          <td>{{row["process"]}}</td>
+          <td>{{row["dbn"] }}</td>
+          <td>{{row["school_name"]}}</td>
+          <td>{{row["program_code"]}}</td>
+          <td>{{row["program_name"]}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </body>
 </html>

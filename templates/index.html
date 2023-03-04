@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>index</title>
+  </head>
+  <body>
+    <h1>School Admission by Diversity</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>school_id</th>
+          <th>process</th>
+          <th>dbn</th>
+          <th>school_name</th>
+          <th>program_code</th>
+          <th>program_name</th>
+          <!-- <th>admission_method</th> -->
+          <!-- <th>diversity_in_admission</th> -->
+          <!-- <th>selection_criteria</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{row["school_id"]}}</td>
+          <td>{{row["process"]}}</td>
+          <td>{{row["dbn"] }}</td>
+          <td>{{row["school_name"]}}</td>
+          <td>{{row["program_code"]}}</td>
+          <td>{{row["program_name"]}}</td>
+          <!-- <td>{{row["admission_method"]}}</td>
+          <td>{{row["diversity_in_admission"]}}</td>
+          <td>{{row["selection_criteria"]}}</td> -->
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

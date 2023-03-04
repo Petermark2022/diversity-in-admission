@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ diversity.school_name }}</title>
+  </head>
+  <body>
+    <h1>{{ diversity.school_name }}</h1>
+    <h2>Enrollments</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>school_id</th>
+          <th>category</th>
+          <th>year</th>
+          <th>total_enrollment</th>
+          <th>female</th>
+          <th>male</th>
+          <th>asia</th>
+          <th>black</th>
+          <th>hispanic</th>
+          <th>other</th>
+          <th>white</th>
+          <th>spanish</th>
+          <th>chinese</th>
+          <th>bengali</th>
+          <th>arabic</th>
+          <th>haitian</th>
+          <th>french</th>
+          <th>russian</th>
+          <th>korean</th>
+          <th>urdu</th>
+          <th>math_level</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+          <tr>
+            <td>{{ row["school_id"]}}</td>
+            <td>{{ row["category"]}}</td>
+            <td>{{ row["year"]}}</td>
+            <td>{{ row["asia"]}}</td>
+            <td>{{ row["black"]}}</td>
+            <td>{{ row["hispanic"]}}</td>
+            <td>{{ row["other"]}}</td>
+            <td>{{ row["white"]}}</td>
+            <td>{{ row["spanish"]}}</td>
+            <td>{{ row["chinese"]}}</td>
+            <td>{{ row["bengali"]}}</td>
+            <td>{{ row["arabic"]}}</td>
+            <td>{{ row["haitian"]}}</td>
+            <td>{{ row["french"]}}</td>
+            <td>{{ row["russian"]}}</td>
+            <td>{{ row["korean"]}}</td>
+            <td>{{ row["urdu"]}}</td>
+            <td>{{ row["math_level"]}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home</title>
+    <title>{{ diversity.school_name }}</title>
     <style>
       /* Style the navigation bar */
       nav {
@@ -53,11 +53,9 @@
     <nav>
       <h1>Navigation Bar</h1>
       <div>
-        <button class="nav-btn" onclick="location.href='home.html'">Home</button>
-        <button class="nav-btn" onclick="location.href='show.html'">Diversity</button>
+        <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+        <button class="nav-btn" onclick="location.href='diversity.html'">Diversity</button>
       </div>
     </nav>
-    <h1>Home Page</h1>
-    <p>Welcome to our website!</p>
-  </body>
-</html>
+    <h1>{{ diversity.school_name }}</h1>
+    <h2>Enrollments</h2>
